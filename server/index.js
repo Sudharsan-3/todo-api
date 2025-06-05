@@ -1,9 +1,9 @@
 import express from "express"
 import bodyParser from "body-parser";
 import cors from "cors"
-import { CreateUser } from "./rotutes/create&login/createUser.js";
+import { CreateUser } from "./rotutes/Register/createUser.js";
 import dotenv from 'dotenv';
-import { Login } from "./rotutes/create&login/loginUser.js";
+import { Login } from "./rotutes/Login/loginUser.js";
 import { CreateTask } from "./rotutes/crudInTask/create.js";
 import { DeleteTask } from "./rotutes/crudInTask/delete.js";
 import { GetAllTask } from "./rotutes/crudInTask/read.js";
