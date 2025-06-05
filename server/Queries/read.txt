@@ -1,0 +1,20 @@
+Create table on pg admin to save the todo list users
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(50),
+  password VARCHAR(50),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+Task table for storing the todo list datas
+
+CREATE TABLE tasks (
+  id SERIAL PRIMARY KEY,
+  task VARCHAR(750) NOT NULL,
+  user_id INTEGER NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+
+
